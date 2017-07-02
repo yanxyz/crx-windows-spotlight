@@ -1,0 +1,33 @@
+{
+  "name": "Windows Spotlight",
+  "version": "1.0.0",
+  "description": "Windows Spotlight helper",
+  "manifest_version": 2,
+  "minimum_chrome_version": "60",
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://spotlight.it-notes.ru/images/*"
+      ],
+      "js": [
+        "spotlight.it-notes.ru.js"
+      ]
+    }
+  ],
+  "icons": {
+    "128": "img/icon-128.png"
+  },
+  "browser_action": {
+  },
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "https://www.google.com/"
+  ]
+}
